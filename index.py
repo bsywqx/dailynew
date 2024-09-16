@@ -9,5 +9,5 @@ req = requests.get(url, headers=headers)
 bs = BeautifulSoup(req.text, 'html.parser')
 print(bs.find("head").prettify())
 print(bs.find("div", class_="style_card__8X4rP style_daily__tt3_7 border-1px").prettify())
-with open("readhub.html", "w", encoding="utf-8") as d:
+with open("index.html", "w", encoding="utf-8") as d:
     d.write(bs.find("head").prettify()+bs.find("div", class_="style_card__8X4rP style_daily__tt3_7 border-1px").prettify())
